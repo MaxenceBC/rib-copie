@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copier RIB</title>
+</head>
+<body>
+    <h1>Votre RIB</h1>
+    <p>Votre RIB a été copié dans le presse-papier automatiquement.</p>
+    <script>
+        const rib = "IBAN : FR76 1234 5678 9012 3456 7890 123";
+        navigator.clipboard.writeText(rib).then(() => {
+            alert("RIB copié dans le presse-papier !");
+        }).catch(err => {
+            alert("Impossible de copier le RIB automatiquement. Veuillez le copier manuellement : " + rib);
+        });
+    </script>
+</body>
+</html>
